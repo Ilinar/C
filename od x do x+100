@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int x,i;
+int main()
+{
+    printf("Enter x: \n");
+    scanf("%i",&x);
+    for (i=x; i<=100+x; i++)
+    {
+        printf("%i\n",i);
+    }
+    return 0;
+}
