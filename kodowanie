@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+
+void change(char* word)
+{
+      int i,n;
+      n = strlen(word);
+      for ( i=0; i<n; i++ ) {
+            switch (word[i]) {
+            case 'a':
+            case 'b':
+            case 'c':
+            case 'A':
+            case 'B':
+            case 'C':
+                  word[i] = 'X';
+                  break;
+            case 'd':
+            case 'e':
+            case 'f':
+            case 'D':
+            case 'E':
+            case 'F':
+                  word[i] = 'Y';
+                  break;
+            case 'z':
+                  word[i] = 'Z';
+                  break;
+            }
+      }
+}
+
+int main()
+{
+      char word[80];
+      printf("This program changes some characters in your word.\n");
+      printf("Please write a word: ");
+      scanf("%s",word);
+      printf("Your input is: %s\n",word);
+      change(word);
+      printf("Your word after the change is: %s\n",word);
+      return 0;
+}
